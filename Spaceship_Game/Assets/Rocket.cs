@@ -18,11 +18,13 @@ public class Rocket : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space)) {
             print("The space button has been pressed");
         }
-        else if (Input.GetKey("a")) {
-            print("the player is rotating left");
-        }
-        else if (Input.GetKey("d")) {
-            print("the player is rotating right");
+        if (Input.GetKey("a") || Input.GetKey("d")) {         
+			if (Input.GetKey("a")) {
+				print("the player is rotating left");
+			}
+			else if (Input.GetKey("d")) {
+				print("the player is rotating right");
+			}
         }
     }
 }
