@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour {
 
-    AudioSource audioSource;
     Rigidbody rigidBody;
+	AudioSource audioSource;
 
 	// Use this for initialization
 	void Start () {
@@ -19,10 +19,14 @@ public class Rocket : MonoBehaviour {
 	}
 
     private void ProcessInput() {
-        audioSource.Stop();
         if (Input.GetKey(KeyCode.Space)) {
             rigidBody.AddRelativeForce(Vector3.up);
-            audioSource.Play();
+            if (!audioSource.isPlaying) {
+                audioSource.Play();
+            }
+        }
+        else {
+			audioSource.Stop();
         }
         if (Input.GetKey("a") || Input.GetKey("d")) {         
 			if (Input.GetKey("a")) {
