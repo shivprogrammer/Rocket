@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Rocket : MonoBehaviour {
 
+    Rigidbody rigidBody;
+
 	// Use this for initialization
 	void Start () {
-		
+        rigidBody = GetComponent<Rigidbody>(); 
 	}
 	
 	// Update is called once per frame
@@ -16,14 +18,14 @@ public class Rocket : MonoBehaviour {
 
     private void ProcessInput() {
         if (Input.GetKey(KeyCode.Space)) {
-            print("The space button has been pressed");
+            rigidBody.AddRelativeForce(Vector3.up);
         }
         if (Input.GetKey("a") || Input.GetKey("d")) {         
 			if (Input.GetKey("a")) {
-				print("the player is rotating left");
+				print("Rotating LEFT");
 			}
 			else if (Input.GetKey("d")) {
-				print("the player is rotating right");
+				print("Rotating RIGHT");
 			}
         }
     }
