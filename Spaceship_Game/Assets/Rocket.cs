@@ -15,10 +15,11 @@ public class Rocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        ProcessInput();
-	}
+		Boosting();
+        Rotate();
+    }
 
-    private void ProcessInput() {
+    private void Boosting() {
         if (Input.GetKey(KeyCode.Space)) {
             rigidBody.AddRelativeForce(Vector3.up);
             if (!audioSource.isPlaying) {
@@ -26,15 +27,20 @@ public class Rocket : MonoBehaviour {
             }
         }
         else {
-			audioSource.Stop();
-        }
-        if (Input.GetKey("a") || Input.GetKey("d")) {         
-			if (Input.GetKey("a")) {
-                transform.Rotate(Vector3.forward);
-			}
-			else if (Input.GetKey("d")) {
-                transform.Rotate(Vector3.back);
-			}
+            audioSource.Stop();
         }
     }
+
+	private void Rotate() {
+        rigidBody.freezeRotation = true;
+		if (Input.GetKey("a") || Input.GetKey("d")) {
+			if (Input.GetKey("a")) {
+				transform.Rotate(Vector3.forward);
+			}
+			else if (Input.GetKey("d")) {
+				transform.Rotate(Vector3.back);
+			}
+		}
+        rigidBody.freezeRotation = false; // the physics engine takesover
+	}
 }
