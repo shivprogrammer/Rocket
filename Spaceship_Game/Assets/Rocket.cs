@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rocket : MonoBehaviour {
     
     [SerializeField] float rcsThrust = 250f;
-    [SerializeField] float mainThrust = 50f;
+    [SerializeField] float mainThrust = 35f;
 
     Rigidbody rigidBody;
 	AudioSource audioSource;
@@ -23,7 +23,17 @@ public class Rocket : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision collision) {
-        print("Collided"); 
+        switch (collision.gameObject.tag) {
+            case "Friendly":
+                print("we are chillin");
+                break;
+            case "Finish":
+                print("YOU WON");
+                break;
+            default:
+                print("You ded son");
+                break;
+        }
     }
 
     private void Boosting() {
