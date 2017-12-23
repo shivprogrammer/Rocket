@@ -22,6 +22,10 @@ public class Rocket : MonoBehaviour {
         Rotate();
     }
 
+    void OnCollisionEnter(Collision collision) {
+        print("Collided"); 
+    }
+
     private void Boosting() {
         if (Input.GetKey(KeyCode.Space)) {
             rigidBody.AddRelativeForce(Vector3.up * mainThrust);
