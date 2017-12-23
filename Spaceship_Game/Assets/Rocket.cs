@@ -33,12 +33,16 @@ public class Rocket : MonoBehaviour {
 
 	private void Rotate() {
         rigidBody.freezeRotation = true;
-		if (Input.GetKey("a") || Input.GetKey("d")) {
-			if (Input.GetKey("a")) {
-				transform.Rotate(Vector3.forward);
+        float rcsThrust = 100f;
+		float rotationThisFrame = rcsThrust * Time.deltaTime;
+
+        if (Input.GetKey("a") || Input.GetKey("d")) {
+
+            if (Input.GetKey("a")) {
+                transform.Rotate(Vector3.forward * rotationThisFrame);
 			}
 			else if (Input.GetKey("d")) {
-				transform.Rotate(Vector3.back);
+                transform.Rotate(Vector3.back * rotationThisFrame);
 			}
 		}
         rigidBody.freezeRotation = false; // the physics engine takesover
