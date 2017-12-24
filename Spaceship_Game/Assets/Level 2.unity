@@ -927,22 +927,6 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 5.5179
-      objectReference: {fileID: 0}
-    - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.37948
-      objectReference: {fileID: 0}
-    - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 105.27701
-      objectReference: {fileID: 0}
-    - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 6.43755
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
   m_IsPrefabParent: 0
@@ -1046,7 +1030,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1678473265659922, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_Name
@@ -1238,7 +1222,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1678473265659922, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_Name
@@ -1268,6 +1252,25 @@ Transform:
   m_PrefabParentObject: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d,
     type: 2}
   m_PrefabInternal: {fileID: 2108374224}
+--- !u!1 &1575910564 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1678473265659922, guid: f3a6b5288d49846afa167c679ccd773d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1072519581}
+--- !u!114 &1575910565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1575910564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45af7d87e2832412cae9a85205703e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -15, z: 0}
+  period: 4
+  movementFactor: 0
 --- !u!1001 &1576535870
 Prefab:
   m_ObjectHideFlags: 0
