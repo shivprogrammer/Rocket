@@ -7,6 +7,7 @@ public class Rocket : MonoBehaviour {
     [SerializeField] float mainThrust = 25f;
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip death;
+    [SerializeField] AudioClip success;
 
     Rigidbody rigidBody;
 	AudioSource audioSource;
@@ -23,7 +24,7 @@ public class Rocket : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         // TODO: Stop sound on death
-        if (state != State.Dead) {
+        if (state == State.Alive) {
 			RespondToThrustInput();
 			RespondToRotateInput();
         }
@@ -36,17 +37,17 @@ public class Rocket : MonoBehaviour {
 
         switch (collision.gameObject.tag) {
             case "Friendly":
-                print("we are chillin");
                 break;
             case "Finish":
-                print("BALLLLLINNNN");
                 state = State.Transcending;
+                audioSource.Stop();
+                audioSource.PlayOneShot(success);
                 Invoke("LoadNextScene", 1f);
                 break;
             default:
-                print("You ded son");
-                audioSource.PlayOneShot(death); 
                 state = State.Dead;
+                audioSource.Stop();
+				audioSource.PlayOneShot(death); 
                 Invoke("LoadOnDeath", 1f);
                 break;
         }
