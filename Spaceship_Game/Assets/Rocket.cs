@@ -20,6 +20,7 @@ public class Rocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        // TODO: Stop sound on death
         if (state != State.Dead) {
 			Boosting();
 			Rotate();
@@ -27,6 +28,10 @@ public class Rocket : MonoBehaviour {
     }
 
     void OnCollisionEnter(Collision collision) {
+        if (state != State.Alive) {
+            return;
+        }
+
         switch (collision.gameObject.tag) {
             case "Friendly":
                 print("we are chillin");
