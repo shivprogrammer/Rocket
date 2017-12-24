@@ -6,6 +6,7 @@ public class Rocket : MonoBehaviour {
     [SerializeField] float rcsThrust = 250f;
     [SerializeField] float mainThrust = 25f;
     [SerializeField] AudioClip mainEngine;
+    [SerializeField] AudioClip death;
 
     Rigidbody rigidBody;
 	AudioSource audioSource;
@@ -44,6 +45,7 @@ public class Rocket : MonoBehaviour {
                 break;
             default:
                 print("You ded son");
+                audioSource.PlayOneShot(death); 
                 state = State.Dead;
                 Invoke("LoadOnDeath", 1f);
                 break;
@@ -55,6 +57,7 @@ public class Rocket : MonoBehaviour {
     }
 
     private void LoadOnDeath() {
+
         SceneManager.LoadScene(0);
     }
 
@@ -69,8 +72,8 @@ public class Rocket : MonoBehaviour {
 
     private void Thrusting() {
         rigidBody.AddRelativeForce(Vector3.up * mainThrust);
-        if (!audioSource.isPlaying)
-        {
+
+        if (!audioSource.isPlaying) {
             audioSource.PlayOneShot(mainEngine);
         }
     }
@@ -80,7 +83,7 @@ public class Rocket : MonoBehaviour {
 		float rotationThisFrame = rcsThrust * Time.deltaTime;
 
         if (Input.GetKey("a") || Input.GetKey("d")) {
-
+           
             if (Input.GetKey("a")) {
                 transform.Rotate(Vector3.forward * rotationThisFrame);
 			}
