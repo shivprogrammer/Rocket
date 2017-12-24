@@ -395,7 +395,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 27
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -403,19 +403,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.59129816
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.59129816
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.3877712
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.38777113
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_RootOrder
@@ -439,11 +439,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 113.487
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1270,7 +1270,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementVector: {x: 0, y: -15, z: 0}
   period: 4
-  movementFactor: 0
 --- !u!1001 &1576535870
 Prefab:
   m_ObjectHideFlags: 0
