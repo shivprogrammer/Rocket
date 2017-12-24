@@ -9,8 +9,7 @@ public class Oscillator : MonoBehaviour {
     [SerializeField] float period = 4f;
 
     // TODO remove from inspector later
-    [Range(0, 1)] [SerializeField] float movementFactor; // 0 for not moved, 1 for fully moved
-
+    float movementFactor; // 0 for not moved, 1 for fully moved
     Vector3 startingPos;
 
 	// Use this for initialization
@@ -20,11 +19,11 @@ public class Oscillator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (period <= Mathf.Epsilon) { return;  }
         float cycles = Time.time / period;
 
         const float tau = Mathf.PI * 2;
-        float rawSinWave = Mathf.Sin(cycles * tau);
+        float rawSinWave = Mathf.Sin(cycles * tau); // goes from -1 to +1 
 
         movementFactor = rawSinWave / 2f + 0.5f;
         Vector3 offset = movementVector * movementFactor;
