@@ -15,7 +15,6 @@ public class Rocket : MonoBehaviour {
 
     Rigidbody rigidBody;
 	AudioSource audioSource;
-    ParticleSystem particleSystem;
 
     enum State { Alive, Transcending, Dead };
     State state = State.Alive;
@@ -44,20 +43,28 @@ public class Rocket : MonoBehaviour {
             case "Friendly":
                 break;
             case "Finish":
-                state = State.Transcending;
-                audioSource.Stop();
-                audioSource.PlayOneShot(success);
-                successParticles.Play();
-                Invoke("LoadNextScene", 1f);
+                SuccessSequence();
                 break;
             default:
-                state = State.Dead;
-                audioSource.Stop();
-                audioSource.PlayOneShot(death); 
-				deathParticles.Play();
-                Invoke("LoadOnDeath", 1f);
+                DeathSequence();
                 break;
         }
+    }
+
+    private void SuccessSequence() {
+        state = State.Transcending;
+        audioSource.Stop();
+        audioSource.PlayOneShot(success);
+        successParticles.Play();
+        Invoke("LoadNextScene", 1f);
+    }
+
+    private void DeathSequence() {
+        state = State.Dead;
+        audioSource.Stop();
+        audioSource.PlayOneShot(death);
+        deathParticles.Play();
+        Invoke("LoadOnDeath", 1f);
     }
 
     private void LoadNextScene() {
