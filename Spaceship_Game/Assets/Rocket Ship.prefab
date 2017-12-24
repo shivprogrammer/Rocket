@@ -480,7 +480,7 @@ MonoBehaviour:
   mainThrust: 25
   mainEngine: {fileID: 8300000, guid: cf2eae45254c34929ad5bda9498c95e9, type: 3}
   death: {fileID: 8300000, guid: c779de0cc139b4d61b38c7ee4e12f8d5, type: 3}
-  finishLine: {fileID: 0}
+  success: {fileID: 8300000, guid: 98c78b88e855b4926bf358f9c3c6c33c, type: 3}
 --- !u!135 &135930739727446450
 SphereCollider:
   m_ObjectHideFlags: 1

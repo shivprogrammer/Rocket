@@ -9,6 +9,10 @@ public class Rocket : MonoBehaviour {
     [SerializeField] AudioClip death;
     [SerializeField] AudioClip success;
 
+    [SerializeField] ParticleSystem mainEngineParticles;
+    [SerializeField] ParticleSystem deathParticles;
+    [SerializeField] ParticleSystem successParticles;
+
     Rigidbody rigidBody;
 	AudioSource audioSource;
 
@@ -23,7 +27,7 @@ public class Rocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        // TODO: Stop sound on death
+
         if (state == State.Alive) {
 			RespondToThrustInput();
 			RespondToRotateInput();
