@@ -29,10 +29,17 @@ public class Rocket : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         if (state == State.Alive) {
 			RespondToThrustInput();
 			RespondToRotateInput();
+        }
+        // todo only if debug on
+        RespondToDebugKeys();
+    }
+
+    private void RespondToDebugKeys() {
+        if (Input.GetKeyDown(KeyCode.L)) {
+            LoadNextScene();
         }
     }
 
@@ -41,16 +48,16 @@ public class Rocket : MonoBehaviour {
             return;
         }
 
-        switch (collision.gameObject.tag) {
-            case "Friendly":
-                break;
-            case "Finish":
-                SuccessSequence();
-                break;
-            default:
-                DeathSequence();
-                break;
-        }
+		switch (collision.gameObject.tag) {
+			case "Friendly":
+				break;
+			case "Finish":
+				SuccessSequence();
+				break;
+			default:
+				DeathSequence();
+				break;
+		}
     }
 
     private void SuccessSequence() {

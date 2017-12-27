@@ -295,16 +295,6 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 6.43755
       objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: movementVector.y
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: period
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
   m_IsPrefabParent: 0
@@ -773,16 +763,6 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 6.4375477
       objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: movementVector.y
-      value: -14
-      objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: period
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
   m_IsPrefabParent: 0
@@ -947,8 +927,7 @@ Prefab:
       propertyPath: m_Name
       value: Obstacle (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1098620659
@@ -1014,6 +993,24 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cf44e1694aa5840e1b77b37c584ea82f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1098620660 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1394170720148824, guid: cf44e1694aa5840e1b77b37c584ea82f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1098620659}
+--- !u!114 &1098620661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1098620660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45af7d87e2832412cae9a85205703e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementVector: {x: 0, y: -15, z: 40}
+  period: 6
 --- !u!1001 &1186891840
 Prefab:
   m_ObjectHideFlags: 0
@@ -1198,16 +1195,6 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 22.866024
       objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: movementVector.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: period
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
   m_IsPrefabParent: 0
@@ -1299,7 +1286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45af7d87e2832412cae9a85205703e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementVector: {x: 0, y: -16, z: 0}
+  movementVector: {x: 0, y: -15, z: 0}
   period: 4
 --- !u!1001 &1576535870
 Prefab:
@@ -1499,16 +1486,6 @@ Prefab:
     - target: {fileID: 4658613251277550, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
       propertyPath: m_LocalScale.y
       value: 6.43755
-      objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: movementVector.y
-      value: -12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114130595782636870, guid: f3a6b5288d49846afa167c679ccd773d,
-        type: 2}
-      propertyPath: period
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a6b5288d49846afa167c679ccd773d, type: 2}
